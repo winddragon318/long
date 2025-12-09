@@ -121,8 +121,6 @@ C:\Users\Long\Desktop\learning\sellphone\sellphone\obj\Debug\net10.0\compressed\
 C:\Users\Long\Desktop\learning\sellphone\sellphone\obj\Debug\net10.0\compressed\b12dp9uabp-{0}-ir474ug6zy-ir474ug6zy.gz
 C:\Users\Long\Desktop\learning\sellphone\sellphone\obj\Debug\net10.0\compressed\6zn619azhc-{0}-5cl6jzyzps-5cl6jzyzps.gz
 C:\Users\Long\Desktop\learning\sellphone\sellphone\obj\Debug\net10.0\compressed\tbc0emqh08-{0}-a2c1phmbzv-a2c1phmbzv.gz
-C:\Users\Long\Desktop\learning\sellphone\sellphone\obj\Debug\net10.0\compressed\j38sf66e21-{0}-mms3wz3ut0-mms3wz3ut0.gz
-C:\Users\Long\Desktop\learning\sellphone\sellphone\obj\Debug\net10.0\compressed\mjna3ur3s0-{0}-toamgd1qf4-toamgd1qf4.gz
 C:\Users\Long\Desktop\learning\sellphone\sellphone\obj\Debug\net10.0\compressed\7w3ati3x7k-{0}-50vlarnm9j-50vlarnm9j.gz
 C:\Users\Long\Desktop\learning\sellphone\sellphone\bin\Debug\net10.0\Azure.Core.dll
 C:\Users\Long\Desktop\learning\sellphone\sellphone\bin\Debug\net10.0\Azure.Identity.dll
@@ -262,3 +260,4 @@ C:\Users\Long\Desktop\learning\sellphone\sellphone\bin\Debug\net10.0\runtimes\wi
 C:\Users\Long\Desktop\learning\sellphone\sellphone\obj\Debug\net10.0\sellphone.csproj.AssemblyReference.cache
 C:\Users\Long\Desktop\learning\sellphone\sellphone\obj\Debug\net10.0\sellphone.csproj.Up2Date
 C:\Users\Long\Desktop\learning\sellphone\sellphone\obj\Debug\net10.0\compressed\iw59v5aekf-{0}-r8ma8l9jaj-r8ma8l9jaj.gz
+C:\Users\Long\Desktop\learning\sellphone\sellphone\obj\Debug\net10.0\compressed\mjna3ur3s0-{0}-hmbwpj7k96-hmbwpj7k96.gz

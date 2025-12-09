@@ -1,5 +1,17 @@
 ﻿@page "/not-found"
 @layout MainLayout
+<SectionContent SectionName="HeaderExtras">
+    <div class="d-flex align-items-center gap-3 ms-3">
+
+        <a href="/wishlist" class="text-dark position-relative text-decoration-none">
+            <i class="bi bi-heart fs-5"></i>
+        </a>
+        <a href="/cart" class="text-dark position-relative text-decoration-none">
+            <i class="bi bi-cart3 fs-5"></i>
+        </a>
+        <AccountDropdown />
+    </div>
+</SectionContent>
 
 <h3>Not Found</h3>
 <p>Sorry, the content you are looking for does not exist.</p>

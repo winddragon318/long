@@ -1,4 +1,7 @@
 ﻿@page "/"
+@using sellphone.Components.Shared
+<PageTitle>Home</PageTitle>
+
 <SectionContent SectionName="HeaderExtras">
     <div class="d-flex align-items-center gap-3 ms-3">
 
@@ -8,6 +11,7 @@
         <a href="/cart" class="text-dark position-relative text-decoration-none">
             <i class="bi bi-cart3 fs-5"></i>
         </a>
+        <AccountDropdown />
     </div>
 </SectionContent>
 <div class="container mt-4 mb-5">
@@ -40,7 +44,7 @@
                     <div class="carousel-item active">
                         <div class="row align-items-center">
                             <div class="col-md-6 pt-3 ps-md-4">
-                                <div class="d-flex align-items-center gap-2 mb-3">
+                                <div class="d-flex align-items-center gap-2 mb-3 justify-content-start">
                                     <i class="bi bi-apple fs-1"></i>
                                     <span class="fs-5">iPhone 14 Series</span>
                                 </div>
@@ -131,27 +135,27 @@
 
                 <div class="flash-sale-item">
                     <ProductCard Name="AK-900 Wired Keyboard" Price="960" OldPrice="1160" Discount="35" Stars="4" Reviews="75"
-                                 ImageUrl="/images/display.jfif" />
-                </div>
-
-                <div class="flash-sale-item">
-                    <ProductCard Name="IPS LCD Gaming Monitor" Price="370" OldPrice="400" Discount="30" Stars="5" Reviews="99"
-                                 ImageUrl="/images/console.jpg" />
-                </div>
-
-                <div class="flash-sale-item">
-                    <ProductCard Name="S-Series Comfort Chair" Price="375" OldPrice="400" Discount="25" Stars="4" Reviews="99"
                                  ImageUrl="/images/keyboard.jfif" />
                 </div>
 
                 <div class="flash-sale-item">
-                    <ProductCard Name="HAVIT HV-G92 Gamepad" Price="120" OldPrice="160" Discount="40" Stars="5" Reviews="88"
+                    <ProductCard Name="IPS LCD Gaming Monitor" Price="370" OldPrice="400" Discount="30" Stars="5" Reviews="99"
+                                 ImageUrl="/images/display.jfif" />
+                </div>
+
+                <div class="flash-sale-item">
+                    <ProductCard Name="S-Series Comfort Chair" Price="375" OldPrice="400" Discount="25" Stars="4" Reviews="99"
                                  ImageUrl="/images/chair.jfif" />
                 </div>
 
                 <div class="flash-sale-item">
+                    <ProductCard Name="HAVIT HV-G92 Gamepad" Price="120" OldPrice="160" Discount="40" Stars="5" Reviews="88"
+                                 ImageUrl="/images/ps5.png" />
+                </div>
+
+                <div class="flash-sale-item">
                     <ProductCard Name="AK-900 Wired Keyboard" Price="960" OldPrice="1160" Discount="35" Stars="4" Reviews="75"
-                                 ImageUrl="/images/chair2.jfif" />
+                                 ImageUrl="/images/key.jpg" />
                 </div>
             </div>
 
@@ -341,13 +345,13 @@
     <div class="featured-section mb-5">
 
         <div class="mb-4">
-            <div class="d-flex align-items-center gap-3 mb-2">
+            <div class="d-flex align-items-center gap-3 mb-2 justify-content-start">
                 <div class="bg-danger rounded" style="width: 20px; height: 40px;"></div>
                 <span class="text-danger fw-bold">Featured</span>
             </div>
             <h2 class="fw-bold mb-0">New Arrival</h2>
         </div>
-
+        
         <div class="row g-4" style="min-height: 600px;">
 
             <div class="col-lg-6">
@@ -411,49 +415,7 @@
         </div>
     </div>
     <br><br>
-
-    <div class="container my-5 pb-5">
-        <div class="row justify-content-center text-center g-4">
-
-            <div class="col-md-4">
-                <div class="service-item">
-                    <div class="icon-outer-ring">
-                        <div class="icon-inner-circle bg-black text-white">
-                            <i class="bi bi-truck fs-3"></i>
-                        </div>
-                    </div>
-                    <h5 class="fw-bold mt-4 mb-2">FREE AND FAST DELIVERY</h5>
-                    <p class="small text-muted">Free delivery for all orders over $140</p>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="service-item">
-                    <div class="icon-outer-ring">
-                        <div class="icon-inner-circle bg-black text-white">
-                            <i class="bi bi-headset fs-3"></i>
-                        </div>
-                    </div>
-                    <h5 class="fw-bold mt-4 mb-2">24/7 CUSTOMER SERVICE</h5>
-                    <p class="small text-muted">Friendly 24/7 customer support</p>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="service-item">
-                    <div class="icon-outer-ring">
-                        <div class="icon-inner-circle bg-black text-white">
-                            <i class="bi bi-shield-check fs-3"></i>
-                        </div>
-                    </div>
-                    <h5 class="fw-bold mt-4 mb-2">MONEY BACK GUARANTEE</h5>
-                    <p class="small text-muted">We return money within 30 days</p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
+    <Fash_icon />
     <div class="position-fixed bottom-0 end-0 m-4">
         <a href="#" class="btn btn-secondary rounded-circle p-2 shadow-lg" style="width: 45px; height: 45px;">
             <i class="bi bi-arrow-up"></i>
