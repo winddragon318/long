@@ -1,0 +1,140 @@
+﻿.category-list li {
+    margin-bottom: 14px;
+}
+
+    .category-list li a {
+        text-decoration: none;
+        color: black;
+        font-size: 15px;
+        display: block;
+        transition: color 0.2s;
+    }
+
+        .category-list li a:hover {
+            color: #db4444;
+            padding-left: 5px;
+        }
+
+/* Chỉnh sửa Banner */
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 5px;
+    opacity: 0.5;
+}
+
+    .carousel-indicators button.active {
+        background-color: #db4444; /* Chấm đỏ khi active */
+        opacity: 1;
+    }
+
+/* Ẩn thanh cuộn xấu xí */
+#flashSaleList::-webkit-scrollbar {
+    display: none;
+}
+
+#flashSaleList {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* QUAN TRỌNG: Responsive kích thước card */
+.flash-sale-item {
+    flex-shrink: 0; /* Không cho phép co lại */
+}
+
+/* Mặc định (Mobile): Card nhỏ gọn để hiện được nhiều */
+.flash-sale-item {
+    width: 170px; /* Trên điện thoại mỗi card rộng 170px */
+}
+
+/* Tablet trở lên (Màn hình > 768px): Card to ra chút */
+@media (min-width: 768px) {
+    .flash-sale-item {
+        width: 220px;
+    }
+}
+
+/* Laptop/PC (Màn hình > 1200px): Card to chuẩn */
+@media (min-width: 1200px) {
+    .flash-sale-item {
+        width: 270px;
+    }
+}
+/* --- MUSIC BANNER BACKGROUND STYLE --- */
+
+.music-banner-bg {
+    background-color: black;
+    background-image: url('/images/speaker.jpg'), radial-gradient(circle at 80% 50%, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0) 60%);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 50%;
+    min-height: 400px;
+}
+
+/* RESPONSIVE: Khi màn hình nhỏ (Điện thoại) */
+@media (max-width: 768px) {
+    .music-banner-bg {
+        background-position: center bottom;
+        background-size: 80%;
+        padding-bottom: 250px !important;
+        background-image: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.2)), url('https://vn-live-01.slatic.net/p/35766289c0e5cda9c4a5c54432049692.jpg');
+    }
+}
+
+/* Giữ nguyên các class timer-circle và btn-success cũ... */
+.timer-circle {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+    .timer-circle .small-text {
+        font-size: 10px;
+        font-weight: 600;
+    }
+
+.text-success {
+    color: #00FF66 !important;
+}
+
+.btn-success {
+    background-color: #00FF66 !important;
+    border-color: #00FF66 !important;
+    color: white !important;
+}
+/* --- SERVICE SECTION STYLES --- */
+
+/* 1. Vòng tròn xám bên ngoài (Viền) */
+.icon-outer-ring {
+    width: 80px;
+    height: 80px;
+    background-color: #c1c1c1; /* Màu xám của viền (hoặc dùng rgba(0,0,0,0.3)) */
+    border-radius: 50%; /* Bo tròn 100% */
+    margin: 0 auto; /* Căn giữa */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+/* 2. Vòng tròn đen bên trong */
+.icon-inner-circle {
+    width: 58px; /* Nhỏ hơn vòng ngoài để lộ viền */
+    height: 58px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hiệu ứng Hover (Di chuột vào thì viền đổi màu đỏ cho đẹp) */
+.service-item:hover .icon-outer-ring {
+    background-color: #db4444; /* Đổi màu viền xám thành đỏ */
+    transform: translateY(-5px); /* Nhảy nhẹ lên trên */
+}
