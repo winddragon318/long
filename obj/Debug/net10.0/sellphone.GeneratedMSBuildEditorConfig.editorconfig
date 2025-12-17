@@ -102,6 +102,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTaGFyZWRcQWNjb3VudERyb3Bkb3duLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Long/Desktop/learning/sellphone/sellphone/Components/Shared/Cart_Heart.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTaGFyZWRcQ2FydF9IZWFydC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Long/Desktop/learning/sellphone/sellphone/Components/Shared/CategoryCard.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTaGFyZWRcQ2F0ZWdvcnlDYXJkLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 

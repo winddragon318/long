@@ -14,7 +14,6 @@
             color: #db4444;
             padding-left: 5px;
         }
-
 /* Chỉnh sửa Banner */
 .carousel-indicators button {
     width: 12px;
@@ -25,53 +24,81 @@
 }
 
     .carousel-indicators button.active {
-        background-color: #db4444; /* Chấm đỏ khi active */
+        background-color: #db4444; 
         opacity: 1;
     }
 
-/* Ẩn thanh cuộn xấu xí */
-#flashSaleList::-webkit-scrollbar {
+.no-scrollbar::-webkit-scrollbar {
     display: none;
 }
 
-#flashSaleList {
+.no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
 
-/* QUAN TRỌNG: Responsive kích thước card */
 .flash-sale-item {
-    flex-shrink: 0; /* Không cho phép co lại */
+    /* Tính toán để hiện đúng 5 item. Trừ đi khoảng gap */
+    flex: 0 0 calc(20% - 12.8px);
+    max-width: calc(20% - 12.8px);
+    transition: all 0.3s ease; /* Tạo hiệu ứng mượt nhẹ */
 }
 
-/* Mặc định (Mobile): Card nhỏ gọn để hiện được nhiều */
-.flash-sale-item {
-    width: 170px; /* Trên điện thoại mỗi card rộng 170px */
-}
-
-/* Tablet trở lên (Màn hình > 768px): Card to ra chút */
-@media (min-width: 768px) {
+@media (max-width: 768px) {
     .flash-sale-item {
-        width: 220px;
-    }
-}
-
-/* Laptop/PC (Màn hình > 1200px): Card to chuẩn */
-@media (min-width: 1200px) {
-    .flash-sale-item {
-        width: 270px;
+        flex: 0 0 calc(50% - 16px);
     }
 }
 /* --- MUSIC BANNER BACKGROUND STYLE --- */
 
 .music-banner-bg {
-    background-color: black;
-    background-image: url('/images/speaker.jpg'), radial-gradient(circle at 80% 50%, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0) 60%);
+    background-color: #000 !important;
+    /* Lớp 1: Ảnh loa | Lớp 2: Radial Gradient (để tạo vệt sáng) */
+    background-image: url('/images/Frame600.webp'), radial-gradient(circle at 80% 50%, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0) 60%);
     background-repeat: no-repeat;
-    background-position: right center;
-    background-size: 50%;
+    /* Màn hình LỚN: Ảnh nằm bên phải, chiếm 50% */
+    background-position: right center, center center; /* Ảnh ở bên phải, Gradient ở giữa */
+    background-size: 50% auto, 100% 100%; /* Ảnh chiếm 50% width, Gradient phủ 100% */
+
     min-height: 400px;
 }
+
+/* --- MEDIA QUERY: Khắc phục trên Màn hình Điện thoại (Ví dụ: dưới 768px) --- */
+@media (max-width: 768px) {
+    .music-banner-bg {
+        /* Màn hình NHỎ: Thay đổi vị trí ảnh */
+        /* Đặt ảnh xuống dưới cùng và căn giữa */
+        background-position: center 100%, center center;
+        /* Tăng kích thước ảnh lên 90% chiều rộng màn hình, không còn bị ẩn */
+        background-size: 90% auto, 100% 100%;
+        /* Tăng min-height để đảm bảo có đủ không gian cho ảnh dưới nội dung */
+        min-height: 600px;
+    }
+
+    .baner-2 {
+        padding: 0px !important;
+    }
+
+    .time-item {
+        width: 60px !important;
+        height: 60px !important;
+    }
+}
+    /* Thêm style cho các hình tròn đếm giờ (đảm bảo hiển thị đúng) */
+    .timer-circle {
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .timer-circle .small-text {
+        font-size: 10px;
+        font-weight: 500;
+    }
 
 /* RESPONSIVE: Khi màn hình nhỏ (Điện thoại) */
 @media (max-width: 768px) {
@@ -83,7 +110,6 @@
     }
 }
 
-/* Giữ nguyên các class timer-circle và btn-success cũ... */
 .timer-circle {
     width: 65px;
     height: 65px;
@@ -114,9 +140,9 @@
 .icon-outer-ring {
     width: 80px;
     height: 80px;
-    background-color: #c1c1c1; /* Màu xám của viền (hoặc dùng rgba(0,0,0,0.3)) */
-    border-radius: 50%; /* Bo tròn 100% */
-    margin: 0 auto; /* Căn giữa */
+    background-color: #c1c1c1; 
+    border-radius: 50%; 
+    margin: 0 auto; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -125,7 +151,7 @@
 
 /* 2. Vòng tròn đen bên trong */
 .icon-inner-circle {
-    width: 58px; /* Nhỏ hơn vòng ngoài để lộ viền */
+    width: 58px; 
     height: 58px;
     border-radius: 50%;
     display: flex;
@@ -133,8 +159,8 @@
     justify-content: center;
 }
 
-/* Hiệu ứng Hover (Di chuột vào thì viền đổi màu đỏ cho đẹp) */
 .service-item:hover .icon-outer-ring {
-    background-color: #db4444; /* Đổi màu viền xám thành đỏ */
-    transform: translateY(-5px); /* Nhảy nhẹ lên trên */
+    background-color: #db4444;
+    transform: translateY(-5px); 
 }
+

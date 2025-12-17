@@ -1,12 +1,7 @@
 ﻿@page "/productdetail"
 <SectionContent SectionName="HeaderExtras">
     <div class="d-flex align-items-center gap-3 ms-3">
-        <a href="/wishlist" class="text-dark position-relative text-decoration-none">
-            <i class="bi bi-heart fs-5"></i>
-        </a>
-        <a href="/cart" class="text-dark position-relative text-decoration-none">
-            <i class="bi bi-cart3 fs-5"></i>
-        </a>
+        <Cart_Heart />
         <AccountDropdown />
     </div>
 </SectionContent>
@@ -56,21 +51,55 @@
             </p>
             <div class="d-flex align-items-center mb-3">
                 <span class="me-3 fs-5">Colours:</span>
-                <div class="d-flex gap-2">
-                    <div class="rounded-circle border border-2 border-primary p-1" style="cursor: pointer;">
-                        <div class="rounded-circle bg-primary" style="width: 15px; height: 15px;"></div>
-                    </div>
-                    <div class="rounded-circle p-1" style="cursor: pointer;">
-                        <div class="rounded-circle bg-danger" style="width: 15px; height: 15px;"></div>
-                    </div>
+                <div class="d-flex gap-3">
+                    @foreach (var item in ColorOptions)
+                    {
+                        <div class="color-checker @(SelectedId == item.Id ? "active" : "")"
+                             style="--theme-color: @item.HexCode;"
+                             @onclick="() => SelectColor(item)">
+
+                            <div class="rounded-circle @item.BsClass"
+                                 style="width: 15px; height: 15px;">
+                            </div>
+                        </div>
+                    }
                 </div>
+                @code {
+                    // 1. Biến lưu trạng thái đang chọn
+                    private int SelectedId = 1; // Mặc định chọn màu Đỏ (Id=1)
+                    private string SelectedColorName = "Đỏ";
+
+                    // 2. Danh sách các lựa chọn màu
+                    private List<ColorItem> ColorOptions = new()
+                                {
+                                new ColorItem { Id = 1, Name = "Đỏ", BsClass = "bg-danger", HexCode = "#dc3545" },
+                                new ColorItem { Id = 2, Name = "Xanh", BsClass = "bg-primary", HexCode = "#0d6efd" }
+                                };
+
+                    // 3. Hàm xử lý khi click
+                    private void SelectColor(ColorItem item)
+                    {
+                        SelectedId = item.Id;
+                        SelectedColorName = item.Name;
+                        // Tại đây có thể bắn EventCallback lên cha hoặc gọi API
+                    }
+
+                    // Class DTO đơn giản
+                    public class ColorItem
+                    {
+                        public int Id { get; set; }
+                        public string Name { get; set; }
+                        public string BsClass { get; set; } // Class Bootstrap (bg-danger, bg-primary)
+                        public string HexCode { get; set; } // Mã màu Hex để làm viền (Border)
+                    }
+                }
             </div>
             <div class="d-flex align-items-center mb-4">
                 <span class="me-3 fs-5">Size:</span>
                 <div class="d-flex gap-2">
                     <button class="btn btn-outline-dark btn-sm px-3 rounded-1 fw-bold border-1 shadow-none">XS</button>
                     <button class="btn btn-outline-dark btn-sm px-3 rounded-1 fw-bold border-1 shadow-none">S</button>
-                    <button class="btn btn-danger btn-sm px-3 rounded-1 fw-bold border-0 shadow-none">M</button> <button class="btn btn-outline-dark btn-sm px-3 rounded-1 fw-bold border-1 shadow-none">L</button>
+                    <button class="btn btn-outline-dark btn-sm px-3 rounded-1 fw-bold border-1 shadow-none">M</button> <button class="btn btn-outline-dark btn-sm px-3 rounded-1 fw-bold border-1 shadow-none">L</button>
                     <button class="btn btn-outline-dark btn-sm px-3 rounded-1 fw-bold border-1 shadow-none">XL</button>
                 </div>
             </div>
@@ -102,6 +131,48 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="best-selling-section mb-5">
+        <div class="row align-items-end mb-4">
+
+            <div class="col-8">
+                <div class="d-flex align-items-center gap-3 mb-2" style="justify-content: flex-start;">
+                    <div class="bg-danger rounded" style="width: 20px; height: 40px;"></div>
+                    <span class="text-danger fw-bold">Related item</span>
+                </div>               
+            </div>         
+        </div>
+        <div class="row g-4">
+
+            <div class="col-md-3 col-6">
+                <div class="h-100">
+                    <ProductCard Name="HAVIT HV-G92 Gamepad" Price="120" OldPrice="160" Discount="40" Stars="5" Reviews="88"
+                                 ImageUrl="/images/havit.png" />
+                </div>
+            </div>
+
+            <div class="col-md-3 col-6">
+                <div class="h-100">
+                    <ProductCard Name="IPS LCD Gaming Monitor" Price="370" OldPrice="400" Discount="30" Stars="5" Reviews="65"
+                                 ImageUrl="/images/ips.png" />
+                </div>
+            </div>
+
+            <div class="col-md-3 col-6">
+                <div class="h-100">
+                    <ProductCard Name="RGB liquid CPU Cooler" Price="160" OldPrice="170" Discount="0" Stars="5" Reviews="65"
+                                 ImageUrl="/images/rgb.png" />
+                </div>
+            </div>
+
+            <div class="col-md-3 col-6">
+                <div class="h-100">
+                    <ProductCard Name="PS5 Controller" Price="120" OldPrice="160" Discount="0" Stars="4" Reviews="65"
+                                 ImageUrl="/images/ps5.png" />
+                </div>
+            </div>
+
         </div>
     </div>
 </div>
@@ -208,4 +279,20 @@
             max-height: 300px;
         }
     }
+
+    /* Class khung bao ngoài */
+    .color-checker {
+        border: 2px solid transparent; /* Viền tàng hình để giữ chỗ */
+        border-radius: 50%;
+        transition: all 0.2s ease;
+        cursor: pointer;
+        padding: 3px; /* Tạo khoảng trắng giữa viền và chấm tròn */
+    }
+
+        /* Khi Hover hoặc Active (được chọn) -> Hiện viền theo màu của biến --theme-color */
+        .color-checker:hover,
+        .color-checker.active {
+            border-color: var(--theme-color);
+            transform: scale(1.1); /* Phóng to nhẹ cho đẹp */
+        }
 </style>

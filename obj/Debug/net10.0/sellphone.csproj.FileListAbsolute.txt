@@ -64,8 +64,6 @@ C:\Users\Long\Desktop\learning\sellphone\sellphone\obj\Debug\net10.0\compressed\
 C:\Users\Long\Desktop\learning\sellphone\sellphone\obj\Debug\net10.0\compressed\z49su2rlwv-{0}-h1s4sie4z3-h1s4sie4z3.gz
 C:\Users\Long\Desktop\learning\sellphone\sellphone\obj\Debug\net10.0\compressed\o97yjt5jyq-{0}-63fj8s7r0e-63fj8s7r0e.gz
 C:\Users\Long\Desktop\learning\sellphone\sellphone\obj\Debug\net10.0\compressed\a3n5qi0yi9-{0}-0j3bgjxly4-0j3bgjxly4.gz
-C:\Users\Long\Desktop\learning\sellphone\sellphone\obj\Debug\net10.0\compressed\98ttm3g48p-{0}-j8lzlu28q6-j8lzlu28q6.gz
-C:\Users\Long\Desktop\learning\sellphone\sellphone\obj\Debug\net10.0\compressed\lihzn8ao8d-{0}-u1n4jc5v46-u1n4jc5v46.gz
 C:\Users\Long\Desktop\learning\sellphone\sellphone\obj\Debug\net10.0\staticwebassets.build.json
 C:\Users\Long\Desktop\learning\sellphone\sellphone\obj\Debug\net10.0\staticwebassets.build.json.cache
 C:\Users\Long\Desktop\learning\sellphone\sellphone\obj\Debug\net10.0\staticwebassets.development.json
@@ -259,5 +257,7 @@ C:\Users\Long\Desktop\learning\sellphone\sellphone\bin\Debug\net10.0\runtimes\wi
 C:\Users\Long\Desktop\learning\sellphone\sellphone\bin\Debug\net10.0\runtimes\win\lib\net9.0\System.Windows.Extensions.dll
 C:\Users\Long\Desktop\learning\sellphone\sellphone\obj\Debug\net10.0\sellphone.csproj.AssemblyReference.cache
 C:\Users\Long\Desktop\learning\sellphone\sellphone\obj\Debug\net10.0\sellphone.csproj.Up2Date
-C:\Users\Long\Desktop\learning\sellphone\sellphone\obj\Debug\net10.0\compressed\iw59v5aekf-{0}-r8ma8l9jaj-r8ma8l9jaj.gz
-C:\Users\Long\Desktop\learning\sellphone\sellphone\obj\Debug\net10.0\compressed\mjna3ur3s0-{0}-hmbwpj7k96-hmbwpj7k96.gz
+C:\Users\Long\Desktop\learning\sellphone\sellphone\obj\Debug\net10.0\compressed\98ttm3g48p-{0}-wmp8iwak4q-wmp8iwak4q.gz
+C:\Users\Long\Desktop\learning\sellphone\sellphone\obj\Debug\net10.0\compressed\lihzn8ao8d-{0}-2lgipwaf5j-2lgipwaf5j.gz
+C:\Users\Long\Desktop\learning\sellphone\sellphone\obj\Debug\net10.0\compressed\iw59v5aekf-{0}-xvnvamh4rk-xvnvamh4rk.gz
+C:\Users\Long\Desktop\learning\sellphone\sellphone\obj\Debug\net10.0\compressed\mjna3ur3s0-{0}-qsvr1o4wpt-qsvr1o4wpt.gz

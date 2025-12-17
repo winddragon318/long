@@ -39,11 +39,12 @@ body {
         margin-bottom: 0;
         font-size: 14px;
     }
-@media (max-width: 1000px) {
-    .navbar-collapse {
-        margin: 0 !important;
+    @media (max-width: 800px) {
+        .navbar-collapse {
+            margin: 0 !important;
+        }
     }
-}
+
     .navbar {
         padding: 20px;
     }
@@ -96,6 +97,7 @@ body {
         background-color: white;
         color: black;
         border-color: #dee2e6;
+        width: 175px !important;
     }
         /* Khi di chuột vào: Nền đỏ, Chữ trắng, Mất viền */
         .category-card:hover {
@@ -104,8 +106,28 @@ body {
             border-color: #db4444;
             box-shadow: 0 4px 15px rgba(219, 68, 68, 0.3);
         }
-    /* --- FEATURED BANNER STYLES --- */
 
+    .category-wrapper {
+        display: block;
+    }
+    /* --- RESPONSIVE CHO ĐIỆN THOẠI (Dưới 768px) --- */
+    @media (max-width: 768px) {
+        /* 1. Ẩn tất cả các wrapper TRỪ thằng đầu tiên */
+        .category-wrapper:not(:first-child) {
+            display: none;
+        }
+
+        .category-card {
+            width: 100% !important;
+        }
+
+        #categoryList {
+            display: block !important;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+    }
+    /* --- FEATURED BANNER STYLES --- */
     .featured-item {
         position: relative;
         overflow: hidden;
@@ -145,4 +167,32 @@ body {
         border-bottom: 1px solid white;
         padding-bottom: 2px;
         pointer-events: auto;
+    }
+    /*Hiệu ứng hover cho icon */
+    .bi-heart {
+        transition: color 0.3s ease;
+        width: 40px;
+        height: 40px;
+    }
+
+        .bi-heart:hover {
+            background-color: #db4444;
+            color: white;
+            border-radius: 50%;
+        }
+
+    .bi-cart3 {
+        transition: color 0.3s ease;
+        width: 40px;
+        height: 40px;
+    }
+
+        .bi-cart3:hover {
+            background-color: #db4444;
+            color: white;
+            border-radius: 50%;
+        }
+
+    .btn-icon:hover {
+        background-color: #db4444 !important;
     }

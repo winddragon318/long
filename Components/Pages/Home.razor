@@ -3,35 +3,26 @@
 <PageTitle>Home</PageTitle>
 
 <SectionContent SectionName="HeaderExtras">
-    <div class="d-flex align-items-center gap-3 ms-3">
-
-        <a href="/wishlist" class="text-dark position-relative text-decoration-none">
-            <i class="bi bi-heart fs-5"></i>
-        </a>
-        <a href="/cart" class="text-dark position-relative text-decoration-none">
-            <i class="bi bi-cart3 fs-5"></i>
-        </a>
+    <div class="d-flex align-items-center gap-1 ms-3">      
+        <Cart_Heart />             
         <AccountDropdown />
     </div>
 </SectionContent>
 <div class="container mt-4 mb-5">
-
     <div class="row g-0">
-
-        <div class="col-lg-2 d-none d-lg-block border-end pe-3">
-            <ul class="list-unstyled category-list">
-                <li><a href="#">Woman's Fashion <i class="bi bi-chevron-right float-end mt-1 fs-6"></i></a></li>
-                <li><a href="#">Men's Fashion <i class="bi bi-chevron-right float-end mt-1 fs-6"></i></a></li>
-                <li><a href="#">Electronics</a></li>
-                <li><a href="#">Home & Lifestyle</a></li>
-                <li><a href="#">Medicine</a></li>
-                <li><a href="#">Sports & Outdoor</a></li>
-                <li><a href="#">Baby's & Toys</a></li>
-                <li><a href="#">Groceries & Pets</a></li>
-                <li><a href="#">Health & Beauty</a></li>
+        <div class="col-12 col-lg-2 border-end pe-3 mb-3 mb-lg-0">
+            <ul class="list-unstyled category-list d-flex flex-lg-column gap-3 gap-lg-0 overflow-auto  py-2 pb-lg-0">
+                <li class="text-nowrap"><a href="/Woman-fashion" class="d-block py-1">Woman's Fashion <i class="bi bi-chevron-right float-end mt-1 fs-6 d-none d-lg-block"></i></a></li>
+                <li class="text-nowrap"><a href="/Men-fashion" class="d-block py-1">Men's Fashion <i class="bi bi-chevron-right float-end mt-1 fs-6 d-none d-lg-block"></i></a></li>
+                <li class="text-nowrap"><a href="/Electronics" class="d-block py-1">Electronics</a></li>
+                <li class="text-nowrap"><a href="/Home-Lisfestyle" class="d-block py-1">Home & Lifestyle</a></li>
+                <li class="text-nowrap"><a href="/Medicine" class="d-block py-1">Medicine</a></li>
+                <li class="text-nowrap"><a href="/Sport-Outdoor" class="d-block py-1">Sports & Outdoor</a></li>
+                <li class="text-nowrap"><a href="/Baby-toy" class="d-block py-1">Baby's & Toys</a></li>
+                <li class="text-nowrap"><a href="/Groceries" class="d-block py-1">Groceries & Pets</a></li>
+                <li class="text-nowrap"><a href="/Health-Beauty" class="d-block py-1">Health & Beauty</a></li>
             </ul>
         </div>
-
         <div class="col-lg-10 ps-lg-4">
             <div id="heroCarousel" class="carousel slide bg-black text-white p-4 p-md-5" data-bs-ride="carousel">
 
@@ -50,11 +41,11 @@
                                 </div>
                                 <h1 class="display-4 fw-bold mb-4">Up to 10% <br> off Voucher</h1>
                                 <button class="btn btn-link text-white text-decoration-underline p-0 fs-5">
-                                    Shop Now-><i class="bi bi-arrow-right ms-2"></i>
+                                    Shop Now<i class="bi bi-arrow-right ms-2"></i>
                                 </button>
                             </div>
                             <div class="col-md-6 text-center">
-                                <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-pro-model-unselect-gallery-2-202209?wid=5120&hei=2880&fmt=p-jpg&qlt=80&.v=1660753617559"
+                                <img src="/images/hero-bg.webp"
                                      class="img-fluid" style="max-height: 300px; object-fit: contain;" alt="iPhone">
                             </div>
                         </div>
@@ -69,7 +60,7 @@
                                 </div>
                                 <h1 class="display-4 fw-bold mb-4">Play Like <br> A Pro</h1>
                                 <button class="btn btn-link text-white text-decoration-underline p-0 fs-5">
-                                    Buy Now-> <i class="bi bi-arrow-right ms-2"></i>
+                                    Buy Now <i class="bi bi-arrow-right ms-2"></i>
                                 </button>
                             </div>
                             <div class="col-md-6 text-center">
@@ -84,78 +75,59 @@
     </div>
 
     <div class="mt-5 pt-4">
-        <div class="d-flex align-items-center gap-3 mb-3" style="justify-content: flex-start;">
+        <div class="d-flex align-items-center gap-3" style="justify-content: flex-start;">
             <div class="bg-danger rounded" style="width: 20px; height: 40px;"></div>
             <span class="text-danger fw-bold">Today's</span>
         </div>
 
-        <div class="d-flex flex-column flex-md-row align-items-md-end gap-md-5 mb-4">
-
+        <div class="d-flex flex-column flex-md-row align-items-center gap-md-5 justify-content-start">
             <h2 class="fw-bold mb-0 display-6">Flash Sales</h2>
-
-            <div class="d-flex gap-3 text-center countdown-timer">
+            <div class="d-flex gap-3 text-center countdown-timer align-items-center">
                 <div>
                     <span class="small text-muted fw-bold">Days</span>
                     <div class="fs-3 fw-bold">03</div>
                 </div>
-                <div class="fs-3 fw-bold text-danger">:</div>
+                <div class="fs-3 fw-bold text-danger"><p style="margin-top:35px !important;">:</p></div>
                 <div>
                     <span class="small text-muted fw-bold">Hours</span>
                     <div class="fs-3 fw-bold">23</div>
                 </div>
-                <div class="fs-3 fw-bold text-danger">:</div>
+                <div class="fs-3 fw-bold text-danger"><p style="margin-top:35px !important;">:</p></div>
                 <div>
                     <span class="small text-muted fw-bold">Minutes</span>
                     <div class="fs-3 fw-bold">19</div>
                 </div>
-                <div class="fs-3 fw-bold text-danger">:</div>
+                <div class="fs-3 fw-bold text-danger"><p style="margin-top:35px !important;">:</p></div>
                 <div>
                     <span class="small text-muted fw-bold">Seconds</span>
                     <div class="fs-3 fw-bold">56</div>
                 </div>
             </div>
             <div class="ms-auto d-none d-md-block">
-                <button class="btn btn-light rounded-circle me-2" type="button" onclick="scrollList('flashSaleList', -1)">
+                <button class="btn btn-light rounded-circle me-2" type="button" @onclick="Previous">
                     <i class="bi bi-arrow-left"></i>
                 </button>
-                <button class="btn btn-light rounded-circle" type="button" onclick="scrollList('flashSaleList', 1)">
+                <button class="btn btn-light rounded-circle" type="button" @onclick="Next">
                     <i class="bi bi-arrow-right"></i>
                 </button>
             </div>
         </div>
 
-        <div class="bg-light p-4 text-center text-muted border border-dashed rounded">
+        <div class=" text-center text-muted">
+            <div class=" text-center text-muted">
+                <div class="d-flex gap-3 overflow-hidden w-100 pb-3 no-scrollbar" style="scroll-behavior: smooth;">
 
-            <div id="flashSaleList" class="d-flex gap-3 overflow-auto w-100 pb-3" style="scroll-behavior: smooth;">
+                    @foreach (var item in Products)
+                    {
+                        <div class="flash-sale-item" @key="item.Name">
+                            <ProductCard Name="@item.Name"
+                                         Price="@((double)item.Price)" OldPrice="@((double)item.OldPrice)" Discount="@item.Discount"
+                                         Stars="@item.Stars"
+                                         Reviews="@item.Reviews"
+                                         ImageUrl="@item.ImageUrl" />
+                        </div>
+                    }
 
-                <div class="flash-sale-item">
-                    <ProductCard Name="HAVIT HV-G92 Gamepad" Price="120" OldPrice="160" Discount="40" Stars="5" Reviews="88"
-                                 ImageUrl="/images/console.jpg" />
-                </div>
-
-                <div class="flash-sale-item">
-                    <ProductCard Name="AK-900 Wired Keyboard" Price="960" OldPrice="1160" Discount="35" Stars="4" Reviews="75"
-                                 ImageUrl="/images/keyboard.jfif" />
-                </div>
-
-                <div class="flash-sale-item">
-                    <ProductCard Name="IPS LCD Gaming Monitor" Price="370" OldPrice="400" Discount="30" Stars="5" Reviews="99"
-                                 ImageUrl="/images/display.jfif" />
-                </div>
-
-                <div class="flash-sale-item">
-                    <ProductCard Name="S-Series Comfort Chair" Price="375" OldPrice="400" Discount="25" Stars="4" Reviews="99"
-                                 ImageUrl="/images/chair.jfif" />
-                </div>
-
-                <div class="flash-sale-item">
-                    <ProductCard Name="HAVIT HV-G92 Gamepad" Price="120" OldPrice="160" Discount="40" Stars="5" Reviews="88"
-                                 ImageUrl="/images/ps5.png" />
-                </div>
-
-                <div class="flash-sale-item">
-                    <ProductCard Name="AK-900 Wired Keyboard" Price="960" OldPrice="1160" Discount="35" Stars="4" Reviews="75"
-                                 ImageUrl="/images/key.jpg" />
                 </div>
             </div>
 
@@ -175,7 +147,7 @@
             <h2 class="fw-bold mb-0">Browse By Category</h2>
 
             <div class="d-none d-md-block">
-                <button class="btn btn-light rounded-circle me-2" onclick="scrollList('categoryList', -1)">
+                <button class="btn btn-lighd-flext rounded-circle me-2" onclick="scrollList('categoryList', -1)">
                     <i class="bi bi-arrow-left"></i>
                 </button>
                 <button class="btn btn-light rounded-circle" onclick="scrollList('categoryList', 1)">
@@ -184,15 +156,30 @@
             </div>
         </div>
 
-        <div id="categoryList" class="d-flex gap-4 flex-wrap pb-4 p-3 justify-content-center" style="scroll-behavior: smooth;">
-            <CategoryCard Name="Phones" IconClass="bi bi-phone" />
-            <CategoryCard Name="Computers" IconClass="bi bi-laptop" />
-            <CategoryCard Name="SmartWatch" IconClass="bi bi-smartwatch" />
-            <CategoryCard Name="Camera" IconClass="bi bi-camera" />
-            <CategoryCard Name="HeadPhones" IconClass="bi bi-headphones" />
-            <CategoryCard Name="Gaming" IconClass="bi bi-controller" />
-            <CategoryCard Name="Tablets" IconClass="bi bi-tablet" />
-        </div>
+            <div id="categoryList" class="d-flex gap-2 flex-wrap pb-4 justify-content-start" style="scroll-behavior: smooth;">
+                <div class="category-wrapper">
+                    <CategoryCard Name="Phones" IconClass="bi bi-phone" />
+                </div>
+
+                <div class="category-wrapper">
+                    <CategoryCard Name="Computers" IconClass="bi bi-laptop" />
+                </div>
+                <div class="category-wrapper">
+                    <CategoryCard Name="SmartWatch" IconClass="bi bi-smartwatch" />
+                </div>
+                <div class="category-wrapper">
+                    <CategoryCard Name="Camera" IconClass="bi bi-camera" />
+                </div>
+                <div class="category-wrapper">
+                    <CategoryCard Name="HeadPhones" IconClass="bi bi-headphones" />
+                </div>
+                <div class="category-wrapper">
+                    <CategoryCard Name="Gaming" IconClass="bi bi-controller" />
+                </div>
+                <div class="category-wrapper">
+                    <CategoryCard Name="Tablets" IconClass="bi bi-tablet" />
+                </div>
+            </div>
     </div>
     <hr class="my-5 opacity-25">
 
@@ -218,57 +205,54 @@
             <div class="col-md-3 col-6">
                 <div class="h-100">
                     <ProductCard Name="The north coat" Price="260" OldPrice="360" Discount="0" Stars="5" Reviews="65"
-                                 ImageUrl="/images/coat.jfif" />
+                                 ImageUrl="/images/coat.png" />
                 </div>
             </div>
 
             <div class="col-md-3 col-6">
                 <div class="h-100">
                     <ProductCard Name="Gucci duffle bag" Price="960" OldPrice="1160" Discount="0" Stars="5" Reviews="65"
-                                 ImageUrl="/images/wallet.jfif" />
+                                 ImageUrl="/images/bag.png" />
                 </div>
             </div>
 
             <div class="col-md-3 col-6">
                 <div class="h-100">
                     <ProductCard Name="RGB liquid CPU Cooler" Price="160" OldPrice="170" Discount="0" Stars="5" Reviews="65"
-                                 ImageUrl="/images/nvida.jpg" />
+                                 ImageUrl="/images/rgb.png" />
                 </div>
             </div>
 
             <div class="col-md-3 col-6">
                 <div class="h-100">
                     <ProductCard Name="Small Bookshelf" Price="360" OldPrice="0" Discount="0" Stars="5" Reviews="65"
-                                 ImageUrl="/images/booksheft.jfif" />
+                                 ImageUrl="/images/self.png" />
                 </div>
             </div>
 
         </div>
     </div>
 </div>
-    <div class="container mb-5">
+    <div class="container mb-5 baner-2">
 
-        <div class="music-banner-bg p-4 p-md-5 rounded shadow-lg d-flex align-items-center justify-content-start">
-
+        <div class="music-banner-bg p-4 p-md-5 rounded shadow-lg d-flex flex-column justify-content-center justify-content-md-start position-relative">
             <div class="col-md-6 text-white">
                 <span class="text-success fw-bold">Categories</span>
                 <h1 class="display-4 fw-bold mt-2 mb-4">Enhance Your <br> Music Experience</h1>
-
                 <div class="d-flex gap-3 mb-4 flex-wrap justify-content-start">
-                    <div class="timer-circle bg-white text-dark">
+                    <div class="timer-circle bg-white text-dark time-item">
                         <span class="fw-bold fs-4 lh-1">23</span><span class="small-text">Hours</span>
                     </div>
-                    <div class="timer-circle bg-white text-dark">
+                    <div class="timer-circle bg-white text-dark time-item">
                         <span class="fw-bold fs-4 lh-1">05</span><span class="small-text">Days</span>
                     </div>
-                    <div class="timer-circle bg-white text-dark">
+                    <div class="timer-circle bg-white text-dark time-item">
                         <span class="fw-bold fs-4 lh-1">59</span><span class="small-text">Minutes</span>
                     </div>
-                    <div class="timer-circle bg-white text-dark">
+                    <div class="timer-circle bg-white text-dark time-item">
                         <span class="fw-bold fs-4 lh-1">35</span><span class="small-text">Seconds</span>
                     </div>
                 </div>
-
                 <button class="btn btn-success px-5 py-3 fw-bold rounded-1">Buy Now!</button>
             </div>
         </div>
@@ -296,17 +280,17 @@
 
             <div class="col-md-3 col-6">
                 <ProductCard Name="Breed Dry Dog Food" Price="100" Stars="3" Reviews="35"
-                             ImageUrl="/images/dogfood.jpg" />
+                             ImageUrl="/images/food.jpg" />
             </div>
 
             <div class="col-md-3 col-6">
                 <ProductCard Name="CANON EOS DSLR Camera" Price="360" Stars="4" Reviews="95"
-                             ImageUrl="https://m.media-amazon.com/images/I/71EWRyqzw0L.jpg" />
+                             ImageUrl="/images/camera.png" />
             </div>
 
             <div class="col-md-3 col-6">
                 <ProductCard Name="ASUS FHD Gaming Laptop" Price="700" Stars="5" Reviews="325"
-                             ImageUrl="/images/asus.jpg" />
+                             ImageUrl="/images/laptop.png" />
             </div>
 
             <div class="col-md-3 col-6">
@@ -316,22 +300,22 @@
 
             <div class="col-md-3 col-6">
                 <ProductCard Name="Kids Electric Car" Price="960" Stars="5" Reviews="65" IsNew="true"
-                             ImageUrl="/images/car.jfif" />
+                             ImageUrl="/images/car.png" />
             </div>
 
             <div class="col-md-3 col-6">
                 <ProductCard Name="Jr. Zoom Soccer Cleats" Price="1160" Stars="5" Reviews="35"
-                             ImageUrl="/images/shoes.jfif" />
+                             ImageUrl="/images/cleats.png" />
             </div>
 
             <div class="col-md-3 col-6">
                 <ProductCard Name="GP11 Shooter USB Gamepad" Price="660" Stars="4" Reviews="55" IsNew="true"
-                             ImageUrl="/images/console2.jfif" />
+                             ImageUrl="/images/gamepad.png" />
             </div>
 
             <div class="col-md-3 col-6">
                 <ProductCard Name="Quilted Satin Jacket" Price="660" Stars="4" Reviews="55"
-                             ImageUrl="/images/jacket.jfif" />
+                             ImageUrl="/images/jacket.png" />
             </div>
 
         </div>
@@ -414,7 +398,6 @@
             </div>
         </div>
     </div>
-    <br><br>
     <Fash_icon />
     <div class="position-fixed bottom-0 end-0 m-4">
         <a href="#" class="btn btn-secondary rounded-circle p-2 shadow-lg" style="width: 45px; height: 45px;">
@@ -422,3 +405,56 @@
         </a>
     </div>
 </div>
+@code {
+    // 1. Tạo Class Model chứa dữ liệu (hoặc dùng class có sẵn của bạn)
+    public class ProductModel
+    {
+        public string Name { get; set; }
+        [Parameter]
+        public decimal Price { get; set; }
+        [Parameter]
+        public decimal OldPrice { get; set; }
+        public int Discount { get; set; }
+        public int Stars { get; set; }
+        public int Reviews { get; set; }
+        public string ImageUrl { get; set; }
+    }
+
+    // 2. Khởi tạo danh sách sản phẩm giả lập
+    public List<ProductModel> Products { get; set; } = new List<ProductModel>
+    {
+        new ProductModel { Name = "HAVIT HV-G92 Gamepad", Price = 120, OldPrice = 160, Discount = 40, Stars = 5, Reviews = 88, ImageUrl = "/images/havit.png" },
+        new ProductModel { Name = "IPS LCD Gaming Monitor", Price = 370, OldPrice = 400, Discount = 30, Stars = 5, Reviews = 99, ImageUrl = "/images/ips.png" },
+        new ProductModel { Name = "S-Series Comfort Chair", Price = 375, OldPrice = 400, Discount = 25, Stars = 4, Reviews = 99, ImageUrl = "/images/s-series.png" },
+        new ProductModel { Name = "PS5 Controller", Price = 120, OldPrice = 160, Discount = 40, Stars = 5, Reviews = 88, ImageUrl = "/images/ps5.png" },
+        new ProductModel { Name = "AK-900 Wired Keyboard", Price = 960, OldPrice = 1160, Discount = 35, Stars = 4, Reviews = 75, ImageUrl = "/images/ak-900.png" },
+        // Thêm các item ẩn để test xoay tua
+        new ProductModel { Name = "Hidden Item 6", Price = 500, OldPrice = 600, Discount = 10, Stars = 3, Reviews = 10, ImageUrl = "/images/console.jpg" },
+        new ProductModel { Name = "Hidden Item 7", Price = 200, OldPrice = 300, Discount = 20, Stars = 4, Reviews = 50, ImageUrl = "/images/display.jfif" }
+    };
+
+    // 3. Logic Xoay tua (Move items in List)
+    
+    // Nút Phải: Đẩy item đầu xuống cuối
+    private void Next()
+    {
+        if (Products.Count > 0)
+        {
+            var item = Products[0];      // Lấy thằng đầu tiên
+            Products.RemoveAt(0);        // Xóa nó khỏi đầu
+            Products.Add(item);          // Thêm nó vào cuối
+        }
+    }
+
+    // Nút Trái: Kéo item cuối lên đầu
+    private void Previous()
+    {
+        if (Products.Count > 0)
+        {
+            var lastIndex = Products.Count - 1;
+            var item = Products[lastIndex]; // Lấy thằng cuối cùng
+            Products.RemoveAt(lastIndex);   // Xóa nó khỏi cuối
+            Products.Insert(0, item);       // Chèn nó vào đầu
+        }
+    }
+}

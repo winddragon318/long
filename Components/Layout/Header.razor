@@ -26,14 +26,14 @@
     </div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><b>Exclusive</b></a>
+            <a class="navbar-brand" href="/"><b>Exclusive</b></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbarContent" aria-controls="myNavbarContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="myNavbarContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Home</a>
+                        <a class="nav-link active" href="/">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/contact">Contact</a>
@@ -45,14 +45,64 @@
                         <a class="nav-link" href="/signup">Sign up</a>
                     </li>
                 </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="What are you looking for?" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                    <div class="ms-auto d-flex align-items-center">
+                <form class="d-flex flex-wrap justify-content-end" role="search">   
+                    <div class="search-box">
+                        <input type="text" placeholder="What are you looking for?">
+                        <button class="search-btn">
+                            <i class="bi bi-search"></i>
+                        </button>                        
+                    </div>
+                    <div class="ms-auto d-flex align-items-center mt-2">
                         <SectionOutlet SectionName="HeaderExtras" />
                     </div>
-                </form>                             
+                </form>               
             </div>
         </div>
     </nav>
 </header>
+<style>
+    .search-box {
+        width: 250px;
+        background: #F3F3F3; 
+        border-radius: 8px;
+        padding: 0px 16px;
+        display: flex;
+        align-items: center; 
+        height: 36px !important;
+        margin-top:8px !important;
+    }
+
+        .search-box input {
+            flex: 1;
+            border: none;
+            outline: none;
+            background: transparent;
+            font-size: 14px;           
+        }
+
+    .search-btn {
+        width: 30px;
+        height: 30px; 
+        background: #F3F3F3;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+        .search-btn i {
+            font-size: 18px;
+            color: #000;
+        }
+
+    .navbar-brand {
+        padding-left: 75px;
+    }
+    @@media (max-width: 800px) {
+        .navbar-brand {
+            padding-left: 0px !important;
+        }
+    }
+</style>

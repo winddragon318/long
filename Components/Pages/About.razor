@@ -3,13 +3,7 @@
 <PageTitle>About</PageTitle>
 <SectionContent SectionName="HeaderExtras">
     <div class="d-flex align-items-center gap-3 ms-3">
-
-        <a href="/wishlist" class="text-dark position-relative text-decoration-none">
-            <i class="bi bi-heart fs-5"></i>
-        </a>
-        <a href="/cart" class="text-dark position-relative text-decoration-none">
-            <i class="bi bi-cart3 fs-5"></i>
-        </a>
+        <Cart_Heart />      
         <AccountDropdown />
     </div>
 </SectionContent>
@@ -30,7 +24,7 @@
             </div>
         </div>
         <div class="col-md-6">
-            <img src="/images/sell.webp"
+            <img src="/images/2girl.jpg"
                  alt="Our Story"
                  class="img-fluid rounded shadow-sm w-100"
                  style="object-fit: cover; height: 500px;">
@@ -38,48 +32,48 @@
     </div>
     <br><br>
     <div class="row g-4 text-center">
-        <div class="col-6 col-md-3">
-            <div class="stat-card border rounded p-4 d-flex flex-column align-items-center justify-content-center">
+        <div class="col-6 col-md-3 mb-2 px-1" >
+            <div class="stat-card border rounded  d-flex flex-column align-items-center justify-content-center">
                 <div class="icon-wrapper mb-3">
                     <div class="icon-bg-black text-white">
-                        <i class="bi bi-shop fs-3"></i>
+                        <i class="bi bi-shop fs-1"></i>
                     </div>
                 </div>
-                <h3 class="fw-bold mb-1">10.5k</h3>
-                <p class="small text-muted">Sellers active our site</p>
+                <h1 class="fw-bold mb-1">10.5k</h1>
+                <p class="text-muted">Sellers active our site</p>
             </div>
         </div>
-        <div class="col-6 col-md-3">
-            <div class="stat-card border rounded p-4 d-flex flex-column align-items-center justify-content-center">
+        <div class="col-6 col-md-3 mb-2 px-1" >
+            <div class="stat-card border rounded  d-flex flex-column align-items-center justify-content-center">
                 <div class="icon-wrapper mb-3">
                     <div class="icon-bg-black text-white">
-                        <i class="bi bi-currency-dollar fs-3"></i>
+                        <i class="bi bi-currency-dollar fs-1"></i>
                     </div>
                 </div>
-                <h3 class="fw-bold mb-1">33k</h3>
-                <p class="small text-white-50">Mopnthly Produduct Sale</p>
+                <h1 class="fw-bold mb-1">33k</h1>
+                <p class="text-muted">Mopnthly Produduct Sale</p>
             </div>
         </div>
-        <div class="col-6 col-md-3">
-            <div class="stat-card border rounded p-4 d-flex flex-column align-items-center justify-content-center">
+        <div class="col-6 col-md-3 mb-2 px-1" >
+            <div class="stat-card border rounded d-flex flex-column align-items-center justify-content-center">
                 <div class="icon-wrapper mb-3">
                     <div class="icon-bg-black text-white">
-                        <i class="bi bi-bag-check fs-3"></i>
+                        <i class="bi bi-bag-check fs-1"></i>
                     </div>
                 </div>
-                <h3 class="fw-bold mb-1">45.5k</h3>
-                <p class="small text-muted">Customer active in our site</p>
+                <h1 class="fw-bold mb-1">45.5k</h1>
+                <p class="text-muted">Customer active in our site</p>
             </div>
         </div>
-        <div class="col-6 col-md-3">
-            <div class="stat-card border rounded p-4 d-flex flex-column align-items-center justify-content-center">
+        <div class="col-6 col-md-3 mb-2 px-1" >
+            <div class="stat-card border rounded d-flex flex-column align-items-center justify-content-center">
                 <div class="icon-wrapper mb-3">
                     <div class="icon-bg-black text-white">
-                        <i class="bi bi-coin fs-3"></i>
+                        <i class="bi bi-coin fs-1"></i>
                     </div>
                 </div>
-                <h3 class="fw-bold mb-1">25k</h3>
-                <p class="small text-muted">Anual gross sale in our site</p>
+                <h1 class="fw-bold mb-1">25k</h1>
+                <p class=" text-muted">Anual gross sale in our site</p>
             </div>
         </div>
     </div>
@@ -87,14 +81,13 @@
     <br><br><br>
 
     <div class="row g-4 mb-5">
-
         <div class="col-md-4 col-12 p-">
             <div class="team-card h-100">
                 <div class="img-box bg-light rounded mb-4 overflow-hidden d-flex justify-content-center pt-4" style="height: 400px;">
                     <img src="/images/tomcruise.jfif"
                          alt="Tom Cruise"
                          class="img-fluid"
-                         style="height: 100%; object-fit: cover;aspect-ratio: 1">
+                         style="height: 100%; object-fit: cover;aspect-ratio: 1;">
                 </div>
                 <h3 class="fw-bold mb-1">Tom Cruise</h3>
                 <p class="text-muted mb-2">Founder & Chairman</p>
@@ -159,10 +152,10 @@
     /* 1. CSS cho Icon Stats */
     /* Vòng tròn viền ngoài (Mờ mờ) */
     .icon-wrapper {
-        width: 70px;
-        height: 70px;
+        width: 80px;
+        height: 80px;
         border-radius: 50%;
-        background-color: rgba(128, 128, 128, 0.2); /* Màu xám nhạt */
+        background-color: #A9A9A9; /* Màu xám nhạt */
         display: flex;
         align-items: center;
         justify-content: center;
@@ -171,8 +164,8 @@
 
     /* Vòng tròn đặc bên trong */
     .icon-bg-black, .icon-bg-white {
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
         border-radius: 50%;
         display: flex;
         align-items: center;
